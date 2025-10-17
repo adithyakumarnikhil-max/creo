@@ -27,7 +27,7 @@ const Team: React.FC = () => {
                     {teamMembers.map((member, index) => (
                         <AnimateOnScroll 
                             key={index} 
-                            className="text-center"
+                            className="text-center transition-all duration-300 hover:scale-105 hover:shadow-xl rounded-lg p-4"
                             delay={0.1 * (index + 1)}
                         >
                             <img src={member.image} alt={member.name} className="w-full h-64 object-cover rounded-lg mb-4" />

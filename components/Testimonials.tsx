@@ -66,7 +66,7 @@ const Testimonials: React.FC = () => {
             </div>
             <div className="w-full md:w-2/3">
                  <div className="relative h-56 overflow-hidden">
-                    <AnimatePresence initial={false} custom={direction}>
+                    <AnimatePresence initial={false} custom={direction} mode="wait">
                         <motion.div
                             key={page}
                             custom={direction}
