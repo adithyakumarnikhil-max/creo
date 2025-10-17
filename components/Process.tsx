@@ -1,7 +1,10 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+// FIX: Import Variants type from framer-motion to explicitly type animation variants.
+// This helps TypeScript correctly interpret the properties like 'ease'.
+import { motion, Variants } from 'framer-motion';
 
-const containerVariants = {
+// FIX: Explicitly type containerVariants with the Variants type.
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -11,7 +14,8 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+// FIX: Explicitly type itemVariants with the Variants type.
+const itemVariants: Variants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
