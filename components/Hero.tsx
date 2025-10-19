@@ -33,35 +33,6 @@ const Hero: React.FC = () => {
       </motion.div>
       <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-      {/* Animated Blueprint Lines */}
-      <div className="absolute inset-0 z-20 hidden md:block">
-          {/* Top horizontal line */}
-          <motion.div 
-              {...lineAnimation('left')}
-              style={{ transformOrigin: 'left' }}
-              className="absolute top-24 left-32 right-[40rem] h-[1px] bg-white/30" 
-          />
-           {/* Bottom horizontal line */}
-           <motion.div 
-              {...lineAnimation('right')}
-              style={{ transformOrigin: 'right' }}
-              className="absolute bottom-40 left-32 right-32 h-[1px] bg-white/30" 
-          />
-           {/* Left Vertical Line */}
-           <motion.div 
-              {...lineAnimation('top')}
-              style={{ transformOrigin: 'top' }}
-              className="absolute top-24 bottom-40 left-32 w-[1px] bg-white/30" 
-          />
-           {/* Right Vertical Line */}
-           <motion.div 
-              {...lineAnimation('bottom')}
-              style={{ transformOrigin: 'bottom' }}
-              className="absolute top-24 bottom-40 right-32 w-[1px] bg-white/30" 
-          />
-      </div>
-
-
       <motion.div className="relative z-20 h-full flex items-center justify-center p-8" style={{ opacity }}>
         <div className="text-center">
             <h1 className="text-6xl md:text-8xl lg:text-9xl xl:text-[140px] font-bold leading-none">
@@ -70,33 +41,64 @@ const Hero: React.FC = () => {
         </div>
       </motion.div>
 
-       {/* Absolutely positioned info blocks */}
-        <motion.div className="absolute top-12 left-32 z-20 text-white/80 hidden md:block" style={{ opacity }}>
-            <p className="font-light">France, Paris</p>
-            <p className="font-light">Str. Believein Yourself 29</p>
-            <p className="font-light">App. 390</p>
-        </motion.div>
+       {/* Container for all aligned overlay elements */}
+       <motion.div 
+          className="absolute inset-0 z-20 container mx-auto px-8 hidden md:block pointer-events-none" 
+          style={{ opacity }}
+        >
+         <div className="relative w-full h-full">
 
-        <motion.div className="absolute top-12 right-[22rem] z-20 text-white/80 hidden md:block" style={{ opacity }}>
-            <p className="font-light">hi@housemood.com</p>
-            <p className="font-light">(099) 791-00-75</p>
-        </motion.div>
+            {/* Animated Blueprint Lines */}
+            <motion.div 
+                {...lineAnimation('left')}
+                style={{ transformOrigin: 'left' }}
+                className="absolute top-24 left-0 right-0 h-[1px] bg-white/30" 
+            />
+            <motion.div 
+                {...lineAnimation('right')}
+                style={{ transformOrigin: 'right' }}
+                className="absolute bottom-40 left-0 right-0 h-[1px] bg-white/30" 
+            />
+            <motion.div 
+                {...lineAnimation('top')}
+                style={{ transformOrigin: 'top' }}
+                className="absolute top-24 bottom-40 left-0 w-[1px] bg-white/30" 
+            />
+            <motion.div 
+                {...lineAnimation('bottom')}
+                style={{ transformOrigin: 'bottom' }}
+                className="absolute top-24 bottom-40 right-0 w-[1px] bg-white/30" 
+            />
 
-        <motion.div className="absolute bottom-16 left-32 z-20 text-white/80 hidden md:block" style={{ opacity }}>
-            <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 border border-white/30 rounded-full flex items-center justify-center text-center">
-                    <p className="text-sm">2021<br/>Interior</p>
-                </div>
-                <p className="font-semibold text-white">Design Awards</p>
+            {/* Info Blocks */}
+            <div className="absolute top-24 pt-4 left-0 text-white/80">
+                <p className="font-light">No 37, 21st Main Road</p>
+                <p className="font-light">Marenahalli, JP Nagar 2nd Phase</p>
+                <p className="font-light">Bangalore 560078</p>
             </div>
-            <p className="text-2xl font-semibold text-white">We Craft Interiors</p>
-            <p className="text-2xl font-light text-white">Since 2014</p>
-        </motion.div>
 
-        <motion.div className="absolute bottom-16 right-32 text-right z-20 text-white/80 hidden md:block" style={{ opacity }}>
-            <p className="font-light">Tech Specifications</p>
-            <p className="font-light">Design Project</p>
-            <p className="font-light">3D Visualisation</p>
+            <div className="absolute top-24 pt-4 right-0 text-right text-white/80">
+                <p className="font-light">creoarchitects1@gmail.com</p>
+                <p className="font-light">+91 9705075741</p>
+            </div>
+
+            <div className="absolute bottom-16 left-0 text-white/80 pointer-events-auto">
+                <div className="flex items-center space-x-4 mb-4">
+                    <div className="w-16 h-16 border border-white/30 rounded-full flex items-center justify-center text-center">
+                        <p className="text-sm">2021<br/>Interior</p>
+                    </div>
+                    <p className="font-semibold text-white">Design Awards</p>
+                </div>
+                <p className="text-2xl font-semibold text-white">We Craft Interiors</p>
+                <p className="text-2xl font-light text-white">Since 2014</p>
+            </div>
+
+            <div className="absolute bottom-16 right-0 text-right text-white/80">
+                <p className="font-light">Tech Specifications</p>
+                <p className="font-light">Design Project</p>
+                <p className="font-light">3D Visualisation</p>
+            </div>
+          </div>
         </motion.div>
     </section>
   );

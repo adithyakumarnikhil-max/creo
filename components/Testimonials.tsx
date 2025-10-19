@@ -17,7 +17,7 @@ const testimonials = [
     story: "Looking for a family-friendly yet sophisticated home, John and Jane entrusted us to create a warm and inviting space for their growing family."
   },
   {
-    quote: "Working with HOUSEMOOD was a seamless experience. They listened to our vision and executed it flawlessly.",
+    quote: "Working with CREO DESIGNERS was a seamless experience. They listened to our vision and executed it flawlessly.",
     name: "Samantha Lee",
     role: "Startup Founder",
     image: "https://i.pravatar.cc/100?img=11",

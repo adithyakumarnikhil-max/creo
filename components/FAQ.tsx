@@ -12,10 +12,13 @@ const FaqItem: React.FC<{ question: string; children: React.ReactNode }> = ({ qu
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-brand-gray py-6">
-      <button
+    <div 
+      className="border-b border-brand-gray py-6"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      <div
         className="w-full flex justify-between items-center text-left text-2xl font-semibold"
-        onClick={() => setIsOpen(!isOpen)}
       >
         <span>{question}</span>
         <motion.div
@@ -24,7 +27,7 @@ const FaqItem: React.FC<{ question: string; children: React.ReactNode }> = ({ qu
         >
             <PlusIcon />
         </motion.div>
-      </button>
+      </div>
       <AnimatePresence initial={false}>
         {isOpen && (
              <motion.div

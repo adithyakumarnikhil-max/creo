@@ -8,9 +8,9 @@ const Footer: React.FC = () => {
         <AnimateOnScroll 
             className="text-center mb-24"
         >
-            <p className="text-gray-400 mb-2">(099) 791-00-75</p>
-            <a href="mailto:hi@housemood.com" className="text-4xl md:text-6xl lg:text-8xl font-bold hover:text-brand-accent transition-colors">
-                hi@housemood.com
+            <p className="text-gray-400 mb-2">+91 9705075741</p>
+            <a href="mailto:creoarchitects1@gmail.com" className="text-4xl md:text-6xl lg:text-8xl font-bold hover:text-brand-accent transition-colors">
+                creoarchitects1@gmail.com
             </a>
         </AnimateOnScroll>
         
@@ -23,9 +23,9 @@ const Footer: React.FC = () => {
                 <a href="#" className="hover:text-brand-accent transition-colors">Terms of Service</a>
             </div>
             <div>
-                 <p className="font-light">France, Paris</p>
-                 <p className="font-light">Str. Believein Yourself 29</p>
-                 <p className="font-light">App. 390</p>
+                 <p className="font-light">No 37, 21st Main Road, Marenahalli</p>
+                 <p className="font-light">JP Nagar 2nd Phase</p>
+                 <p className="font-light">Bangalore 560078</p>
             </div>
         </div>
       </div>

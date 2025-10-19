@@ -51,8 +51,8 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, closeMenu }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, transition: { delay: 0.5 } }}
             >
-                <p>hi@housemood.com</p>
-                <p>(099) 791-00-75</p>
+                <p>creoarchitects1@gmail.com</p>
+                <p>+91 9705075741</p>
             </motion.div>
           </div>
         </motion.div>

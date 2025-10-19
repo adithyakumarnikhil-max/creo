@@ -32,8 +32,8 @@ const Header: React.FC = () => {
       <header className={`fixed top-0 left-0 right-0 z-40 p-4 md:px-8 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-4">
-            <div className={`text-2xl font-bold transition-colors ${scrolled ? 'text-brand-dark' : 'text-white'}`}>HOUSEMOOD</div>
-            <span className={`hidden md:inline font-semibold transition-colors ${scrolled ? 'text-brand-dark' : 'text-white'}`}>Paris</span>
+            <div className={`text-2xl font-bold transition-colors ${scrolled ? 'text-brand-dark' : 'text-white'}`}>CREO DESIGNERS</div>
+            <span className={`hidden md:inline font-semibold transition-colors ${scrolled ? 'text-brand-dark' : 'text-white'}`}>Bangalore</span>
           </div>
           <button 
             onClick={() => setIsMenuOpen(true)}

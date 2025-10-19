@@ -29,13 +29,13 @@ const itemVariants: Variants = {
 
 const Process: React.FC = () => {
     const processSteps = [
-        { num: '01.', title: 'Tech specifications', description: 'Technical assignment, measuring site, and assessing remodeling needs.', image: 'https://images.unsplash.com/photo-1581092921440-4c3031ba2f66?q=80&w=800&auto=format&fit=crop' },
+        { num: '01.', title: 'Tech specifications', description: 'Technical assignment, measuring site, and assessing remodeling needs.', image: 'https://images.unsplash.com/photo-1542892945-9311a8b03144?q=80&w=800&auto=format&fit=crop' },
         { num: '02.', title: 'Concept, sketches', description: 'A hand-drawn sketch typically outlines the style and layout of the future interior.', image: 'https://images.unsplash.com/photo-1558901357-ca42132d4399?q=80&w=800&auto=format&fit=crop' },
-        { num: '03.', title: 'Design project', description: 'Details on color schemes, furniture, lighting placement, and technical layouts.', image: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=800&auto=format&fit=crop' },
-        { num: '04.', title: '3D visualization', description: 'So that the client can see with his own eyes what he will ultimately receive.', image: 'https://images.unsplash.com/photo-1633375839441-272c8b6a3f12?q=80&w=800&auto=format&fit=crop' },
-        { num: '05.', title: 'Estimation', description: 'The pricing details and the total cost of the customer\'s interior design project.', image: 'https://images.unsplash.com/photo-1506744038136-46273834b325?q=80&w=800&auto=format&fit=crop' },
-        { num: '06.', title: 'Materials, etc.', description: 'Building materials, components and furniture: everything you need for the interior.', image: 'https://images.unsplash.com/photo-1596079890744-c1a0462d0975?q=80&w=800&auto=format&fit=crop' },
-        { num: '07.', title: 'Supervision', description: 'Supervises the work, making sure that the interior exactly as he intended.', image: 'https://images.unsplash.com/photo-1542882833-2882b53579f9?q=80&w=800&auto=format&fit=crop' },
+        { num: '03.', title: 'Design project', description: 'Details on color schemes, furniture, lighting placement, and technical layouts.', image: 'https://images.unsplash.com/photo-1572023984511-2a8f8d95107e?q=80&w=800&auto=format&fit=crop' },
+        { num: '04.', title: '3D visualization', description: 'So that the client can see with his own eyes what he will ultimately receive.', image: 'https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=800&auto=format&fit=crop' },
+        { num: '05.', title: 'Estimation', description: 'The pricing details and the total cost of the customer\'s interior design project.', image: 'https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=800&auto=format&fit=crop' },
+        { num: '06.', title: 'Materials, etc.', description: 'Building materials, components and furniture: everything you need for the interior.', image: 'https://images.unsplash.com/photo-1595834282029-7c4a1b0a5a2e?q=80&w=800&auto=format&fit=crop' },
+        { num: '07.', title: 'Supervision', description: 'Supervises the work, making sure that the interior exactly as he intended.', image: 'https://images.unsplash.com/photo-1581092440715-52c7a92a543a?q=80&w=800&auto=format&fit=crop' },
     ];
 
     return (
