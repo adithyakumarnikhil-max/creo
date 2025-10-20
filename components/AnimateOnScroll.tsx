@@ -5,9 +5,10 @@ interface AnimateOnScrollProps {
   children: React.ReactNode;
   className?: string;
   delay?: number;
+  [key: string]: any;
 }
 
-const AnimateOnScroll: React.FC<AnimateOnScrollProps> = ({ children, className, delay = 0 }) => {
+const AnimateOnScroll: React.FC<AnimateOnScrollProps> = ({ children, className, delay = 0, ...rest }) => {
   return (
     <motion.div
       className={className}
@@ -15,6 +16,7 @@ const AnimateOnScroll: React.FC<AnimateOnScrollProps> = ({ children, className, 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.6, ease: 'easeOut', delay }}
+      {...rest}
     >
       {children}
     </motion.div>

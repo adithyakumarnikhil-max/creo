@@ -1,9 +1,26 @@
 import React from 'react';
+import { motion, Variants } from 'framer-motion';
 import AnimateOnScroll from './AnimateOnScroll';
 
-const Footer: React.FC = () => {
+const footerVariants: Variants = {
+  hidden: { y: '50%', opacity: 0 },
+  visible: {
+    y: '0%',
+    opacity: 1,
+    transition: { duration: 0.8, ease: [0.25, 1, 0.5, 1] }
+  }
+};
+
+const Footer: React.FC<{ id?: string }> = ({ id }) => {
   return (
-    <footer className="bg-brand-dark text-white py-24">
+    <motion.footer
+      id={id}
+      className="bg-brand-dark text-white py-24 overflow-hidden"
+      variants={footerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="container mx-auto px-8">
         <AnimateOnScroll 
             className="text-center mb-24"
@@ -29,7 +46,7 @@ const Footer: React.FC = () => {
             </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

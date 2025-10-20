@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-const Hero: React.FC = () => {
+const Hero: React.FC<{ id?: string }> = ({ id }) => {
   const targetRef = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
   });
 
   return (
-    <section ref={targetRef} className="relative h-screen min-h-[700px] text-white overflow-hidden">
+    <section id={id} ref={targetRef} className="relative h-screen min-h-[700px] text-white overflow-hidden">
       <motion.div 
         className="absolute inset-0 z-0"
         style={{ y }}

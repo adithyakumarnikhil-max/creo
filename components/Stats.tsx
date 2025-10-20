@@ -39,15 +39,21 @@ const Stats: React.FC = () => {
   return (
     <section className="py-24 bg-brand-light">
       <div className="container mx-auto px-8">
-        <AnimateOnScroll className="max-w-xl mb-16">
-          <p className="text-sm font-semibold text-gray-500 mb-2">2025</p>
-          <p className="text-2xl md:text-3xl leading-snug">
-            Whether it's your home, office, or a commercial project, we are always dedicated to bringing your vision to life.
-          </p>
-          <p className="text-2xl md:text-3xl font-bold leading-snug mt-2">
-            Our numbers speak better than words:
-          </p>
-        </AnimateOnScroll>
+        <div className="max-w-xl mb-16">
+          <AnimateOnScroll>
+            <p className="text-sm font-semibold text-gray-500 mb-2">2025</p>
+          </AnimateOnScroll>
+          <AnimateOnScroll delay={0.1}>
+            <p className="text-2xl md:text-3xl leading-snug">
+              Whether it's your home, office, or a commercial project, we are always dedicated to bringing your vision to life.
+            </p>
+          </AnimateOnScroll>
+          <AnimateOnScroll delay={0.2}>
+            <p className="text-2xl md:text-3xl font-bold leading-snug mt-2">
+              Our numbers speak better than words:
+            </p>
+          </AnimateOnScroll>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {stats.map((stat, index) => (
             <AnimateOnScroll key={index} delay={index * 0.1}>
