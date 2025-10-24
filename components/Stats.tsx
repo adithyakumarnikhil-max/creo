@@ -36,6 +36,12 @@ const Stats: React.FC = () => {
     { number: '12', title: 'Projects in work', description: 'What we do right now' },
   ];
 
+  const handleScrollToContact = () => {
+    if ((window as any).lenis) {
+      (window as any).lenis.scrollTo('#contact');
+    }
+  };
+
   return (
     <section className="py-24 bg-brand-light">
       <div className="container mx-auto px-8">
@@ -70,7 +76,7 @@ const Stats: React.FC = () => {
         </div>
         <AnimateOnScroll className="mt-16 flex items-center space-x-4" delay={0.5}>
           <p className="text-lg">Want your own Design?</p>
-          <button className="bg-brand-accent text-brand-dark w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-110">
+          <button onClick={handleScrollToContact} className="bg-brand-accent text-brand-dark w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-110">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>

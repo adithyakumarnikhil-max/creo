@@ -22,6 +22,15 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, closeMenu }) => {
     animate: { y: 0, opacity: 1 },
   };
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute('href');
+    closeMenu();
+    if (targetId && (window as any).lenis) {
+      (window as any).lenis.scrollTo(targetId);
+    }
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -41,10 +50,10 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, closeMenu }) => {
               animate="animate"
               transition={{ staggerChildren: 0.1 }}
             >
-              <motion.a variants={navLinkVariants} href="#home" onClick={closeMenu} className="text-5xl font-bold transition-colors hover:text-brand-accent">Home</motion.a>
-              <motion.a variants={navLinkVariants} href="#projects" onClick={closeMenu} className="text-5xl font-bold transition-colors hover:text-brand-accent">Projects</motion.a>
-              <motion.a variants={navLinkVariants} href="#team" onClick={closeMenu} className="text-5xl font-bold transition-colors hover:text-brand-accent">About Us</motion.a>
-              <motion.a variants={navLinkVariants} href="#contact" onClick={closeMenu} className="text-5xl font-bold transition-colors hover:text-brand-accent">Contact</motion.a>
+              <motion.a variants={navLinkVariants} href="#home" onClick={handleLinkClick} className="text-5xl font-bold transition-colors hover:text-brand-accent">Home</motion.a>
+              <motion.a variants={navLinkVariants} href="#projects" onClick={handleLinkClick} className="text-5xl font-bold transition-colors hover:text-brand-accent">Projects</motion.a>
+              <motion.a variants={navLinkVariants} href="#team" onClick={handleLinkClick} className="text-5xl font-bold transition-colors hover:text-brand-accent">About Us</motion.a>
+              <motion.a variants={navLinkVariants} href="#contact" onClick={handleLinkClick} className="text-5xl font-bold transition-colors hover:text-brand-accent">Contact</motion.a>
             </motion.nav>
             <motion.div 
               className="absolute bottom-16 text-center text-gray-400"

@@ -52,6 +52,12 @@ const FaqItem: React.FC<{ question: string; children: React.ReactNode }> = ({ qu
 };
 
 const FAQ: React.FC = () => {
+  const handleScrollToContact = () => {
+    if ((window as any).lenis) {
+      (window as any).lenis.scrollTo('#contact');
+    }
+  };
+
   return (
     <section className="py-24 bg-brand-light">
       <div className="container mx-auto px-8">
@@ -80,7 +86,7 @@ const FAQ: React.FC = () => {
         
         <div className="mt-12 flex items-center space-x-4">
             <p className="text-lg">If you want to know anything else:</p>
-            <button className="text-xl font-semibold flex items-center group">
+            <button onClick={handleScrollToContact} className="text-xl font-semibold flex items-center group">
                 <span>Ask your Question</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
