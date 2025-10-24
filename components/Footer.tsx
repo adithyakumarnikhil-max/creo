@@ -1,25 +1,11 @@
 import React from 'react';
-import { motion, Variants } from 'framer-motion';
 import AnimateOnScroll from './AnimateOnScroll';
-
-const footerVariants: Variants = {
-  hidden: { y: '50%', opacity: 0 },
-  visible: {
-    y: '0%',
-    opacity: 1,
-    transition: { duration: 0.8, ease: [0.25, 1, 0.5, 1] }
-  }
-};
 
 const Footer: React.FC<{ id?: string }> = ({ id }) => {
   return (
-    <motion.footer
+    <footer
       id={id}
       className="bg-brand-dark text-white py-24 overflow-hidden"
-      variants={footerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
     >
       <div className="container mx-auto px-8">
         <AnimateOnScroll 
@@ -31,7 +17,10 @@ const Footer: React.FC<{ id?: string }> = ({ id }) => {
             </a>
         </AnimateOnScroll>
         
-        <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        <AnimateOnScroll 
+          className="flex flex-col md:flex-row justify-between items-center text-center md:text-left"
+          delay={0.2}
+        >
             <div className="mb-8 md:mb-0">
                 <p className="text-gray-400">© All rights Reserved</p>
             </div>
@@ -44,9 +33,9 @@ const Footer: React.FC<{ id?: string }> = ({ id }) => {
                  <p className="font-light">JP Nagar 2nd Phase</p>
                  <p className="font-light">Bangalore 560078</p>
             </div>
-        </div>
+        </AnimateOnScroll>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
 
