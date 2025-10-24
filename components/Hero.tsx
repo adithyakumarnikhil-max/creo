@@ -8,7 +8,6 @@ const Hero: React.FC<{ id?: string }> = ({ id }) => {
     offset: ['start start', 'end start'],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   const lineAnimation = (origin: 'left' | 'right' | 'top' | 'bottom') => ({
@@ -21,16 +20,15 @@ const Hero: React.FC<{ id?: string }> = ({ id }) => {
 
   return (
     <section id={id} ref={targetRef} className="relative h-screen min-h-[700px] text-white overflow-hidden">
-      <motion.div 
+      <div 
         className="absolute inset-0 z-0"
-        style={{ y }}
       >
         <img 
           src="https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=1932&auto=format&fit=crop" 
           alt="Modern living room interior with light wood" 
           className="w-full h-full object-cover"
         />
-      </motion.div>
+      </div>
       <div className="absolute inset-0 bg-black/50 z-10"></div>
 
       <motion.div className="relative z-20 h-full flex items-center justify-center p-8" style={{ opacity }}>
